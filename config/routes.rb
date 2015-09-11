@@ -1,23 +1,23 @@
 Rails.application.routes.draw do
-  get 'sessions/new' => 'sessions#new'
+  get '/sessions/new' => 'sessions#new'
 
-  post 'sessions/create' => 'sessions#create'
+  post '/sessions' => 'sessions#create'
 
-  delete 'sessions/destroy' => 'sessions#destroy'
+  get '/sessions' => 'sessions#destroy', as: 'logout'
 
-  get 'users/index' => 'users#index'
+  get '/users/index' => 'users#index'
 
-  get 'users/new' => 'users#new'
+  get '/users/new' => 'users#new'
 
-  post 'users/create' => 'users#create'
+  post '/users' => 'users#create'
 
-  get 'users/show' => 'users#show'
+  get '/users/:id' => 'users#show'
 
-  get 'users/:id/edit' => 'users#edit'
+  get '/users/:id' => 'users#edit'
 
-  put 'users/:id/edit' => 'users#update'
+  put '/users/:id' => 'users#update'
 
-  delete 'users/:id' => 'users#destroy'
+  delete '/users/:id' => 'users#destroy'
 
   root 'users#index'
 
