@@ -11,18 +11,18 @@
     <%= link_to root_path do %>
       Home
     <% end %>
-    <% if session[:user_id] %>
-        <%= link_to logout_path do %>
-        Log Out
-      <% end %>
+      <% if session? %>
+        <%= link_to sessions_new_path do %>
+          Sign In
+        <% end %>
+        <%= link_to users_new_path do %>
+          Sign Up
+        <% end %>
       <% else %>
-      <%= link_to sessions_new_path do %>
-        Sign In
+        <%= link_to logout_path do %>
+          Log Out
+        <% end %>
       <% end %>
-      <%= link_to users_new_path do %>
-        Sign Up
-      <% end %>
-    <% end %>
   </navbar>
 <%= yield %>
 
