@@ -8,23 +8,17 @@
 </head>
 <body>
   <navbar>
-    <%= link_to root_path do %>
-      Home
+    <%= link_to 'Home', root_path %>
+    <% if signed_in? %>
+      <%= link_to 'Log Out', logout_path %>
+      <h1>Welcome back <%= current_user.first_name %></h1>
+    <% else %>
+      <%= link_to 'Sign In', login_path %>
+      <%= link_to 'Sign Up', new_user_path %>
     <% end %>
-      <% if session? %>
-        <%= link_to sessions_new_path do %>
-          Sign In
-        <% end %>
-        <%= link_to users_new_path do %>
-          Sign Up
-        <% end %>
-      <% else %>
-        <%= link_to logout_path do %>
-          Log Out
-        <% end %>
-      <% end %>
   </navbar>
-<%= yield %>
+
+  <%= yield %>
 
 </body>
 </html>

@@ -1,1 +1,15 @@
-<%= render 'login' %>
+<div style="text-align: center">
+  <h1> Log In</h1>
+  <% if @login_failed %>
+    <h3>Bad email address or password</h3>
+  <% end %>
+  <%= form_for @user, url: login_url do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit "Log In!" %>
+  <% end %>
+</div>

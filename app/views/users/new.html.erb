@@ -1,1 +1,29 @@
-<%= render 'sign_up' %>
+<div style="text-align: center">
+  <h1> Sign Up</h1>
+  <% if @signup_failed %>
+    <h3>Invalid Sign Up Combo</h3>
+  <% end %>
+  <%= form_for @user do |f| %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+      <br>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      <br>
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+      <br>
+      <%= f.label :phase %>
+      <%= f.text_field :phase %>
+      <br>
+      <%= f.label :name %>
+      <%= f.text_field :first_name %>
+      <br>
+      <%= f.label :display_name %>
+      <%= f.text_field :display_name %>
+      <br>
+
+      <%= f.submit "Sign Up!"%>
+  <% end %>
+</div>
