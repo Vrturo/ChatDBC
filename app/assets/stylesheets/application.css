@@ -35,9 +35,10 @@ loginContainer{
    margin-left: -150px;
    margin-top: -150px;
 }
+
  button {
-        height: 40px;
-        width: 150px;
+        height: 50px;
+        width: 180px;
         padding: 10px 15px;
         margin: 20px auto;
         color: #FFFFFF;
