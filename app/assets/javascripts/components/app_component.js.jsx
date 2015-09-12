@@ -7,17 +7,11 @@ var AppComponent = React.createClass({
   },
 
   render: function() {
-    var user = App.currentUser();
-
+    var currentUser = App.currentUser();
     if (App.isLoggedIn()){
-      return <div>
-        <h1>Welcome back {user.name}</h1>
-      </div>;
+      return <HomePage currentUser={currentUser} />
     }else{
-      return <div>
-        <h1>the app component</h1>
-        <LoginButton>Click here to login fool</LoginButton>
-      </div>;
+      return <LoginPage />
     }
   }
 });
