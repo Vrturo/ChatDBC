@@ -3,6 +3,7 @@ var AppComponent = React.createClass({
   rerender: function(){ this.forceUpdate(); },
 
   componentDidMount: function(){
+
     App.rerender = this.rerender;
   },
 
@@ -10,6 +11,7 @@ var AppComponent = React.createClass({
     if (App.isLoggedIn()){
       var currentUser = App.currentUser();
       return <HomePage currentUser={currentUser} />
+
     }else{
       return <LoginPage />
     }
@@ -17,6 +19,9 @@ var AppComponent = React.createClass({
 });
 
 
+var clearHtml = function(){
+  document.body.innerHTML = "";
+}
 
 
 // history.pushState

@@ -5,9 +5,10 @@ HomePage = React.createClass({
 
   render: function(){
     var currentUser = this.props.currentUser;
-    return <div>
+    return <homePageContainer>
       <h1>Welcome back {currentUser.name}</h1>
-      <LogoutButton>Click here to logout brah</LogoutButton>
-    </div>;
+      <LogoutButton>Log Out!</LogoutButton>
+    </homePageContainer>;
   }
 })
+
