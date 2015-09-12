@@ -1,5 +1,7 @@
 var LoginButton = React.createClass({
 
+
+
   onClick: function(event) {
     event.preventDefault();
     App.login();

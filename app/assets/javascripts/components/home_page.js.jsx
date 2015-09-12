@@ -1,5 +1,4 @@
 HomePage = React.createClass({
-
   propTypes: {
     currentUser: React.PropTypes.object.isRequired
   },
