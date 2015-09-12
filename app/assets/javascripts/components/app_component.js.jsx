@@ -10,8 +10,8 @@ var AppComponent = React.createClass({
   render: function() {
     if (App.isLoggedIn()){
       var currentUser = App.currentUser();
+      changeBackground();
       return <HomePage currentUser={currentUser} />
-
     }else{
       return <LoginPage />
     }
@@ -19,8 +19,9 @@ var AppComponent = React.createClass({
 });
 
 
-var clearHtml = function(){
-  document.body.innerHTML = "";
+var changeBackground = function(){
+ index = document.getElementById("loginBackground");
+ index.id = ("loggedinBackground ")
 }
 
 

@@ -13,12 +13,16 @@
  *= require_tree .
  *= require_self
  */
-body {
+#loginBackground {
   background: url('http://cdn2.bigcommerce.com/n-nr1m3w/t79dofd/product_images/uploaded_images/lets-chat-01.jpg?t=1398725710') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+#loggedinBackground {
+  background color: white;
 }
 
 .header{
