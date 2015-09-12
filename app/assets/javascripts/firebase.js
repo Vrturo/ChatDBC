@@ -1,39 +1,42 @@
-console.log('22222')
 
-$(function() {
 
-  var ref = new Firebase("https://chatdbc.firebaseio.com");
 
-  var afterOauth = function(error, authData) {
-    if (error) {
-      alert("Authentication Failed! "+error);
-    } else {
+// console.log('22222')
 
-      login(authData);
-    }
-  };
+// $(function() {
 
-  // var login = function(authData){
-  //   debugger
+//   var ref = new Firebase("https://chatdbc.firebaseio.com");
 
-  //   var request = $.ajax({
-  //     url: '/login',
-  //     data:{
+//   var afterOauth = function(error, authData) {
+//     if (error) {
+//       alert("Authentication Failed! "+error);
+//     } else {
 
-  //     }
-  //   })
-  //   request.done(function(){
+//       login(authData);
+//     }
+//   };
 
-  //   })
-  //   request.fail(function(){
+//   // var login = function(authData){
+//   //   debugger
 
-  //   })
-  // }
+//   //   var request = $.ajax({
+//   //     url: '/login',
+//   //     data:{
 
-  $('#loginLink').on('click', function (e){
-    e.preventDefault();
-    console.log('login cloicked')
-    ref.authWithOAuthPopup("github", afterOauth);
-  });
+//   //     }
+//   //   })
+//   //   request.done(function(){
 
-});
+//   //   })
+//   //   request.fail(function(){
+
+//   //   })
+//   // }
+
+//   $('#loginLink').on('click', function (e){
+//     e.preventDefault();
+//     console.log('login cloicked')
+//     ref.authWithOAuthPopup("github", afterOauth);
+//   });
+
+// });
