@@ -4,6 +4,7 @@ var LoginButton = React.createClass({
     event.preventDefault();
     App.login();
     setHomepageBackground();
+    eraseHeader();
   },
   render: function() {
     return <button onClick={this.onClick}>{this.props.children}</button>;
@@ -13,4 +14,8 @@ var LoginButton = React.createClass({
 var setHomepageBackground = function(){
  index = document.getElementById("loginBackground");
  index.id = ("homePageBackground ");
+}
+
+var eraseHeader = function(){
+ document.getElementById("chatdbc").remove();
 }
