@@ -13,3 +13,61 @@
  *= require_tree .
  *= require_self
  */
+#loginBackground {
+  background: url('http://cdn2.bigcommerce.com/n-nr1m3w/t79dofd/product_images/uploaded_images/lets-chat-01.jpg?t=1398725710') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#homePageBackground {
+  background color: white;
+}
+
+.header{
+  font-family: 'AppleGothic';
+  text-align: center;
+  font-size: 80px;
+  color: white;
+}
+
+loginContainer{
+   position: absolute;
+   left: 44%;
+   top: 80%;
+   margin-left: -150px;
+   margin-top: -150px;
+}
+
+
+homePageContainer{
+background: black;
+}
+
+button {
+        font-family: 'AppleGothic';
+        font-size: 20px;
+        height: 60px;
+        width: 120px;
+        padding: 10px 15px;
+        margin: 20px auto;
+        color: #FFFFFF;
+        background-color: #4CAFD7;
+        border: 0 none;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        position: relative;
+        left: 40%;
+}
+
+
+
+#profilePic{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}

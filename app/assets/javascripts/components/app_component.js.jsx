@@ -7,7 +7,7 @@ var AppComponent = React.createClass({
   },
 
   render: function() {
-    var currentUser = App.currentUser();
+      var currentUser = App.currentUser();
     if (App.isLoggedIn()){
       return <HomePage currentUser={currentUser} />
     }else{
@@ -15,6 +15,8 @@ var AppComponent = React.createClass({
     }
   }
 });
+
+
 
 
 // history.pushState
