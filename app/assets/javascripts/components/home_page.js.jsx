@@ -6,7 +6,8 @@ HomePage = React.createClass({
   render: function(){
     var currentUser = this.props.currentUser;
     return <homePageContainer>
-      <h1>Welcome back {currentUser.name}</h1>
+      <h1>Hello {currentUser.name}</h1>
+      <img id="profilePic" src={currentUser.profileImageURL} />
       <LogoutButton>Log Out!</LogoutButton>
     </homePageContainer>;
   }

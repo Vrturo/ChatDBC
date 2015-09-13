@@ -3,14 +3,12 @@ var AppComponent = React.createClass({
   rerender: function(){ this.forceUpdate(); },
 
   componentDidMount: function(){
-
     App.rerender = this.rerender;
   },
 
   render: function() {
-    if (App.isLoggedIn()){
       var currentUser = App.currentUser();
-      changeBackground();
+    if (App.isLoggedIn()){
       return <HomePage currentUser={currentUser} />
     }else{
       return <LoginPage />
@@ -19,10 +17,6 @@ var AppComponent = React.createClass({
 });
 
 
-var changeBackground = function(){
- index = document.getElementById("loginBackground");
- index.id = ("loggedinBackground ")
-}
 
 
 // history.pushState
