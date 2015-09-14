@@ -5,15 +5,13 @@ HomePage = React.createClass({
 
   render: function(){
     var currentUser = this.props.currentUser;
-    return <homePageWrapper>
-              <homePageContainer>
-                <h1>Hello {currentUser.name}</h1>
-                <img id="profilePic" src={currentUser.profileImageURL} />
-                <LogoutButton>Log Out!</LogoutButton>
-              </homePageContainer>
-
-
-          </homePageWrapper>
+    return <Layout className="HomePage">
+      <div>
+        <h1>Hello {currentUser.name}</h1>
+        <img id="profilePic" src={currentUser.profileImageURL} />
+        <ChatThing />
+        <LogoutButton>Log Out!</LogoutButton>
+      </div>
+    </Layout>
   }
 })
-

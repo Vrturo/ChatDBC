@@ -35,4 +35,4 @@
 // });
 
 
-React.render(<message />, document.getElementById("box"));
+// React.render(<message />, document.getElementById("box"));

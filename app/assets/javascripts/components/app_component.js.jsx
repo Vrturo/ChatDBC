@@ -6,7 +6,7 @@ var AppComponent = React.createClass({
   },
 
   render: function() {
-      var currentUser = App.currentUser();
+    var currentUser = App.currentUser();
     if (App.isLoggedIn()){
       return <HomePage currentUser={currentUser} />
     }else{
@@ -15,14 +15,14 @@ var AppComponent = React.createClass({
   }
 });
 
-var listApp = React.createClass({
-  componentWillMount: function() {
-    this.firebaseRef = new Firebase("chatdbc.firebaseapp.com/");
-    this.firebaseRef.on("child_added", function(dataSnapshot) {
-      this.items.push(dataSnapshot.val());
-      this.setState({
-        items: this.items
-      });
-    }.bind(this));
-  }
-})
+// var listApp = React.createClass({
+//   componentWillMount: function() {
+//     this.firebaseRef = new Firebase("chatdbc.firebaseapp.com/");
+//     this.firebaseRef.on("child_added", function(dataSnapshot) {
+//       this.items.push(dataSnapshot.val());
+//       this.setState({
+//         items: this.items
+//       });
+//     }.bind(this));
+//   }
+// })

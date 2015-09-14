@@ -1,6 +1,7 @@
 App = {};
 
-App.firebase = new Firebase("https://chatdbc.firebaseio.com");
+App.firebase  = new Firebase("https://chatdbc.firebaseio.com");
+// App.myDataRef = new Firebase("chatdbc.firebaseapp.com/");
 
 App.login = function(){
   this.firebase.authWithOAuthPopup("github", function(error){
@@ -33,3 +34,7 @@ App.currentUser = function(){
 App.isLoggedIn = function(){
   return this.currentUser() != null
 };
+
+App.sendMessage = function(name, text){
+  App.firebase.push({name: name, text: text});
+}

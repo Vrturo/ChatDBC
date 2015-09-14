@@ -1,0 +1,12 @@
+.LoginPage {
+/*  position: absolute;
+  left: 44%;
+  top: 80%;
+  margin-left: -150px;
+  margin-top: -150px;*/
+  background: url('http://cdn2.bigcommerce.com/n-nr1m3w/t79dofd/product_images/uploaded_images/lets-chat-01.jpg?t=1398725710') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
