@@ -33,5 +33,3 @@ App.currentUser = function(){
 App.isLoggedIn = function(){
   return this.currentUser() != null
 };
-
-

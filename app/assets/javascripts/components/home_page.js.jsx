@@ -12,6 +12,7 @@ HomePage = React.createClass({
                 <LogoutButton>Log Out!</LogoutButton>
               </homePageContainer>
 
+
           </homePageWrapper>
   }
 })

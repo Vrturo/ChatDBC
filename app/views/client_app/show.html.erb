@@ -14,11 +14,12 @@
 <body id="loginBackground">
   <%= react_component 'AppComponent' %>
   <div id="messageWrapper">
-    <div class="bubble"id='messagesDiv'></div>
-    <input type='text' id='nameInput' placeholder='Name' />
-    <input type='text' id='messageInput' placeholder='Message' />
-  </div>
+      <div id='messagesDiv'></div>
+      <input type='text' id='nameInput' placeholder='Name' />
+      <input type='text' id='messageInput' placeholder='Message' />
+    </div>
 
+    <div id="box"></div>
 </body>
 <script>
   var myDataRef = new Firebase("chatdbc.firebaseapp.com/");

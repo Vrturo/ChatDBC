@@ -9,17 +9,20 @@ var AppComponent = React.createClass({
       var currentUser = App.currentUser();
     if (App.isLoggedIn()){
       return <HomePage currentUser={currentUser} />
-      App.startchat();
     }else{
       return <LoginPage />
-      hideChat();
-
     }
   }
 });
 
-
-var hideChat = function(){
- document.getElementById("firechat-wrapper").hide();
-}
-
+var listApp = React.createClass({
+  componentWillMount: function() {
+    this.firebaseRef = new Firebase("chatdbc.firebaseapp.com/");
+    this.firebaseRef.on("child_added", function(dataSnapshot) {
+      this.items.push(dataSnapshot.val());
+      this.setState({
+        items: this.items
+      });
+    }.bind(this));
+  }
+})
