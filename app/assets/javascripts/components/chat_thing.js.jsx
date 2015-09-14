@@ -29,7 +29,6 @@ ChatThing = React.createClass({
     this.refs.message.getDOMNode().value = '';
 
     App.sendMessage(name, message);
-    // console.log([name, message]);
   },
   render: function(){
     var messages = this.state.messages.map(function(message){

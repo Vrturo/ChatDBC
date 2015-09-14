@@ -14,15 +14,3 @@ var AppComponent = React.createClass({
     }
   }
 });
-
-// var listApp = React.createClass({
-//   componentWillMount: function() {
-//     this.firebaseRef = new Firebase("chatdbc.firebaseapp.com/");
-//     this.firebaseRef.on("child_added", function(dataSnapshot) {
-//       this.items.push(dataSnapshot.val());
-//       this.setState({
-//         items: this.items
-//       });
-//     }.bind(this));
-//   }
-// })
