@@ -18,11 +18,13 @@
   display: none;
 }
 
-homePageContainer, button{
-  position: relative;
-  right: 0%;
-  top: 15%;
+/*log out button*/
+.HomePageContainer {
+  display: flex;
+  width: 90%;
+
 }
+
 
 button {
         font-family: 'AppleGothic';
@@ -81,4 +83,19 @@ input:focus {
     outline: none;
     color: #ECF0F1;
 }
+.ChatThread {
+    overflow: scroll;
+    text-align: center;
+    height: 500px;
 
+}
+
+.ChatThread, ol{
+  background-color: #f8f8f8;
+  list-style-type:none;
+  font-size: 20px;
+}
+
+.ChatThread, li{
+
+}

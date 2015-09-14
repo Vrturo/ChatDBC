@@ -38,5 +38,3 @@ App.sendMessage = function(name, text){
   App.firebase.push({name: name, text: text});
 }
 
-
-App.activeVisitors = App.firebase.child('activeVisitors');
