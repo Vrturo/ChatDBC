@@ -25,13 +25,6 @@
   background color: white;
 }
 
-#chatdbc{
-  font-family: 'AppleGothic';
-  text-align: center;
-  font-size: 80px;
-  color: white;
-}
-
 loginContainer{
    position: absolute;
    left: 44%;
@@ -42,7 +35,17 @@ loginContainer{
 
 
 homePageContainer{
-background: black;
+   position: absolute;
+   left: 10%;
+   top: 20%;
+   margin-left: -10px;
+   margin-top: -150px;
+}
+
+homePageContainer, button{
+  position: relative;
+  right: 0%;
+  top: 15%;
 }
 
 button {
@@ -71,3 +74,9 @@ button {
   width: 200px;
   height: 200px;
 }
+
+#messagesDiv {
+      height: 475px;
+      max-width: 325px;
+      background-color: black;
+    }
