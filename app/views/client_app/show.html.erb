@@ -1,18 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>ChatDBC</title>
-  <link rel='stylesheet' href='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.css' />
-  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <head>
+    <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
 
-  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
-  <script src='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.js'></script>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body id="loginBackground">
-  <%= react_component 'AppComponent' %>
+  </head>
+  <body>
+    <div id='messagesDiv'></div>
+    <input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'>
 
-</body>
+    <div id="content"> </div>
+  </body>
+  <script>
+  var myDataRef = new Firebase("chatdbc.firebaseapp.com/");
+
+    $('#messageInput').keypress(function (e) {
+      if (e.keyCode == 13) {
+        alert('worked')
+        var name = $('#nameInput').val();
+        var text = $('#messageInput').val();
+        myDataRef.push({name: name, text: text});
+        $('#messageInput').val('');
+      }
+    });
+    myDataRef.on('child_added', function(snapshot) {
+      var message = snapshot.val();
+      displayChatMessage(message.name, message.text);
+    });
+    function displayChatMessage(name, text) {
+      $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+      $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+    };
+  </script>
 </html>
