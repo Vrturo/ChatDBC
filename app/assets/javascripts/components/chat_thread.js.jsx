@@ -1,4 +1,4 @@
-ChatThing = React.createClass({
+ChatThread = React.createClass({
 
   getInitialState: function(){
     return{
@@ -37,7 +37,7 @@ ChatThing = React.createClass({
         <span>{message.text}</span>
       </li>;
     });
-    return <div className="ChatThing">
+    return <div className="ChatThread">
       <ol>{messages}</ol>
       <form onSubmit={this.onSubmit}>
         <input ref="name"    type="text" placeholder="your name" />

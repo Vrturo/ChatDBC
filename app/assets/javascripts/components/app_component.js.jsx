@@ -9,6 +9,7 @@ var AppComponent = React.createClass({
     var currentUser = App.currentUser();
     if (App.isLoggedIn()){
       return <HomePage currentUser={currentUser} />
+
     }else{
       return <LoginPage />
     }
