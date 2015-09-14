@@ -13,36 +13,15 @@
  *= require_tree .
  *= require_self
  */
-#loginBackground {
-  background: url('http://cdn2.bigcommerce.com/n-nr1m3w/t79dofd/product_images/uploaded_images/lets-chat-01.jpg?t=1398725710') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
+.hidden{
+  display: none;
 }
 
-#homePageBackground {
-  background color: white;
-}
-
-.header{
-  font-family: 'AppleGothic';
-  text-align: center;
-  font-size: 80px;
-  color: white;
-}
-
-loginContainer{
-   position: absolute;
-   left: 44%;
-   top: 80%;
-   margin-left: -150px;
-   margin-top: -150px;
-}
-
-
-homePageContainer{
-background: black;
+homePageContainer, button{
+  position: relative;
+  right: 0%;
+  top: 15%;
 }
 
 button {
@@ -71,3 +50,35 @@ button {
   width: 200px;
   height: 200px;
 }
+
+#messageWrapper{
+  margin:0 auto;
+  width:400px;
+  background-color:rgba(240, 240, 240, 0.2);
+  display:table;
+  padding:5px;
+  border-radius:5px;
+  margin-bottom:10px;
+}
+
+input{
+  box-sizing: border-box;
+    background-color: inherit;
+    border: none;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    font-family: inherit;
+    font-size: 1rem;
+    -webkit-transition: background-color .15s ease-out;
+       -moz-transition: background-color .15s ease-out;
+         -o-transition: background-color .15s ease-out;
+            transition: background-color .15s ease-out;
+    background-color: #eee;
+}
+
+input:focus {
+    background-color: #2C3E50;
+    outline: none;
+    color: #ECF0F1;
+}
+

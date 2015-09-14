@@ -1,5 +1,4 @@
 var AppComponent = React.createClass({
-
   rerender: function(){ this.forceUpdate(); },
 
   componentDidMount: function(){
@@ -7,7 +6,7 @@ var AppComponent = React.createClass({
   },
 
   render: function() {
-      var currentUser = App.currentUser();
+    var currentUser = App.currentUser();
     if (App.isLoggedIn()){
       return <HomePage currentUser={currentUser} />
     }else{
@@ -15,14 +14,3 @@ var AppComponent = React.createClass({
     }
   }
 });
-
-
-
-
-// history.pushState
-// history.replaceState
-
-// addEventListener('popstate', function(event) {
-//   console.log('popstate fired!');
-//   updateContent(event.state);
-// });
