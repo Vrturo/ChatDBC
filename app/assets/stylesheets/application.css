@@ -75,8 +75,13 @@ button {
   height: 200px;
 }
 
-#messagesDiv {
-      height: 475px;
-      max-width: 325px;
-      background-color: black;
-    }
+#messageWrapper{
+  margin:0 auto;
+  width:400px;
+  background-color:rgba(240, 240, 240, 0.2);
+  display:table;
+  padding:5px;
+  border-radius:5px;
+  margin-bottom:10px;
+}
+

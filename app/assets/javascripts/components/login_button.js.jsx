@@ -3,6 +3,7 @@ var LoginButton = React.createClass({
   onClick: function(event) {
     event.preventDefault();
     App.login();
+    setHomepageBackground();
 
   },
   render: function() {
@@ -10,3 +11,8 @@ var LoginButton = React.createClass({
 
   }
 });
+
+
+var setHomepageBackground = function(){
+ document.getElementById("loginBackground").id = ("homePageBackground");
+}
