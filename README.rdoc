@@ -1,28 +1,96 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*Intro yourself...
+*Intro Chat.DBC
+single page app that uses real time technology to let users log in with their github and talk to one another
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+*future features
+
+
+
+*mention the technologies used (react, rails, firebase)
+*mention the timeframe we had
+
+#REACT
+React is a JavaScript library for creating user interfaces made by Facebook and Instagram. Many people choose to think of React as the "V" in the MVC. React helps express how your app should look at any given point in time, and React will automatically manage all UI updates when youre underlying data changes.
+
+The virtual DOM used by React is simply an internal implementation detail of the framework which powers its amazing rendering performance. React keeps two copies of a virtual DOM (the original and updated versions).
+
+When the data changes, React conceptually hits the "refresh" button, and knows to only update the changed parts. React is all about building reusable components. In fact, with React the only thing you do is build components. Since they're so encapsulated, components make code testing, reuse, and separation of concerns easy.
+
+#FIREBASE
+Firebase is a realtime database that you can communicate with directly from the client. When you save your JSON data to Firebase, changes are sent instantly to all clients, web and mobile, that requested them. With built-in static file hosting, user management, and security rules, Firebase will help you build modern applications faster than ever.
+
+It also helps Authenticate users with email & password, Facebook, Twitter, GitHub, Google, anonymous auth, or easily integrate with your existing authentication system.
+
+#REACT RAILS GEM
+react-rails makes it easy to use React and JSX in your Ruby on Rails react-rails can:
+
+Provide various react builds to your asset bundle
+Transform .jsx in the asset pipeline
+Render components into views and mount them via view helper & react_ujs
+Render components server-side with prerender: true
+Generate components with a Rails generator
+Be extended with custom renderers, transformers and view helpers
+
+
+react-rails includes a view helper (react_component) and an unobtrusive JavaScript driver (react_ujs) which work together to put React components on the page.
+
+The view helper puts a div on the page with the requested component class & props.
+
+
+*show that it is a single page app and only has a show
+
+#APP COMPONENT
+#react create class
+When creating a component class by invoking React.createClass(), you should provide a specification object that contains a render method and can optionally contain other lifecycle methods described here.
+
+
+
+#force update
+By default, when your component's state or props change, your component will re-render. However, if these change implicitly or if your render() method depends on some other data, you can tell React that it needs to re-run render() by calling forceUpdate().
+
+Calling forceUpdate() will cause render() to be called on the component, skipping shouldComponentUpdate(). This will trigger the normal lifecycle methods for child components, including the shouldComponentUpdate() method of each child. React will still only update the DOM if the markup changes.
+
+Normally you should try to avoid all uses of forceUpdate() and only read from this.props and this.state in render(). This usually makes your component "pure" and your application much simpler and more efficient
+
+
+
+#componentdidmount
+ If you need to interact with the browser, you can perform your work in componentDidMount() like i did here
+reason i chose this was because it was Invoked once, only on the client and not on the server,and immediately after the initial rendering occurs. At this point in the lifecycle, the component has a DOM representation which you can access The componentDidMount() method of child components is invoked before that of parent components.
+
+#CHATHREAD
+
+on the chatthread component i set the chatthread to listen for events and submit when children are added.
+
+#getinitialstate
+I started off with getinitialstate() to return messages as an empty array at first
+
+#componentdidmount
+but then i added a componentdidmount with a firebase.on() that
+Listens for data changes at a particular location. So in this case when we send messages
+
+#componentwillunmount
+used a firebase.off(childadded) to basically detach the .on when a user logs off
+
+#onchildadded
+i launched a function that takes a messages value with the .val()
+i set the variable messages as the state of messages.
+we started with an empty array up top but now when a message is pushed in it changes our state and lets us update it
+
+#onSubmit
+
+I set the input value as a form so it lets me use the onsubmit
+and by using the prevent default that lets me stop the button from refreshing and submitting and instead taking the value of the variable name and message and I launched the App.sendMessage that sends the message with the name of the user and the value in the message field
+
+once we submit we make the messages that were created in a list and map them to the chatthread container
+
+and at the the end we're able to return the chatThread with the updatedmessages and form once again ready to take on messages
+
+
+
+
+#Object.assign()
+The Object.assign() method is used to copy the values of all enumerable own properties from one or more source objects to a target object. It will return the target object.
+
+So in this case we copy the element and create a div that will add the class name container and an other classes it has as well
