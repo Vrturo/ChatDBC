@@ -24,25 +24,25 @@ ChatThread = React.createClass({
   onSubmit: function(event){
     event.preventDefault();
     var message = this.refs.message.getDOMNode().value;
+    var name = App.currentUser().name
 
     this.refs.message.getDOMNode().value = '';
 
     App.sendMessage(name, message);
   },
   render: function(){
-
     var messages = this.state.messages.map(function(message){
       return <li>
-        <bold>{App.currentUser().name}:</bold>&nbsp;
-        <span>{message.text}</span>&nbsp;
+        <bold>{message.name}:</bold>&nbsp;
+        <span>{message.text}</span>
         </li>;
     });
     return <div className="ChatThread">
-      <ol>{messages}</ol>
-      <form onSubmit={this.onSubmit}>
-        <input ref="message" type="text" placeholder="Insert message.." />
-        <input type="submit" className="hidden" />
-      </form>
-    </div>
+        <ol>{messages}</ol>
+        <form onSubmit={this.onSubmit}>
+          <input ref="message" type="text" placeholder="Insert message.." />
+          <input type="submit" className="hidden" />
+        </form>
+      </div>
   }
 })
