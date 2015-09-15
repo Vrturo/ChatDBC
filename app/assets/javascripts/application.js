@@ -10,8 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require Object.assign.js
 //= require showdown
 //= require react
 //= require react_ujs
 //= require components
+//= require_self
 //= require_tree .
+
