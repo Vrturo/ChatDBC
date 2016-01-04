@@ -4,7 +4,7 @@ Chat.DBC is a simple real time messenger web app that uses React on the front en
 
 ### Walkthrough of the App
 
-<iframe src="https://www.youtube.com/watch?v=aDTxVpSvK6I"</iframe>
+<iframe src="https://www.youtube.com/watch?v=aDTxVpSvK6I"></iframe>
 
 ## Technical Stack
 
